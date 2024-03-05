@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+// Write a function fibonacciPattern that takes an integer parameter `row` and print the pascal triangle of Fibonacci number. Then in the `main` function prompt the user to enter a row number call the fibonacciPattern
+
+void fibonacciPattern(int row){
+    
+    int i=1, j=1;
+    while(i<=row){
+
+        int prev = 0;
+        int curr = 1;
+        int next;
+        j=1;
+
+        while(j<=i){
+
+            cout<<prev<<" ";
+            next = prev + curr;
+            prev = curr;
+            curr = next;
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+}
+
+int main(){
+
+    cout<<endl;
+    int row = 7, r = 0;
+
+    fibonacciPattern(row);
+
+    cout<<endl;
+    return 0;
+}
+
+
+
+

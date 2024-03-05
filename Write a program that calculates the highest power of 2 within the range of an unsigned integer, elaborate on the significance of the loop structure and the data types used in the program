@@ -1,0 +1,37 @@
+#include <iostream>
+#include <limits>
+
+// Write a program that calculates the highest power of 2 within the range of an unsigned integer, elaborate on the significance of the loop structure and the data types used in the program.
+
+// The program initializes an unsigned int variable, maxint, with the maximum value representable by an unsigned integer on a typical 32-bit system. It then employs a for loop, iterating through powers of 2 until it reaches or exceeds the value of maxint. The loop increments a counter variable, count, with each iteration, essentially counting the number of times the loop runs.
+
+
+using namespace std; 
+
+int main()
+{
+
+    unsigned int i=1, maxint = numeric_limits<int>::max();
+    int count = 1;
+
+    while(i<=maxint){
+        i*=2;
+        count++;
+    }
+
+    // for(unsigned int i=1; i<=maxint; i*=2){
+    //     count++;
+    // }
+
+    cout<<"2^"<<count<<endl;
+
+    cout<<"range of signed int: "<<numeric_limits<int>::max()<<endl;
+
+    cout<<"Range of unsigned int: "<<numeric_limits<unsigned int>::max()<<endl;
+
+    cout<<"Range of short int: "<<numeric_limits<short>::max()<<endl;
+
+    return 0;
+}
+
+
